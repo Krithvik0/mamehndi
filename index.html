@@ -278,102 +278,51 @@
     }
 
     /* PORTFOLIO */
+  .gallery1{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:35px;
+}
+
+.gallery1 img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:0.3s ease;
+}
+
+.gallery1 img:hover{
+    transform:scale(1.05);
+}
+
+@media(max-width:768px){
+
+    .stats{
+        grid-template-columns:1fr;
+    }
 
     .gallery1{
-      display:grid;
-      gap:28px;
-      margin-top:35px;
+        grid-template-columns:1fr;
     }
-  
-    .img1{
-      width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 3vh;
-      border-radius:25px;
-      /*opacity: 0.7;
-      transition: 0.3s ease;
-      */
-    }
-    .img1:hover{
-      opacity: 1;
-      transform: scale(1.0);
-    }
-  
-    .img3{
-      width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 16vh;
-      border-radius:25px;  
-      /*opacity: 0.7;
-      transition: 0.3s ease;*/
-    }
-    .img3:hover{
-      opacity: 1;
-      transform: scale(1.0);
-    }
-    .img4{
-      width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 29vh;
-      border-radius:25px;
-      /*opacity: 0.7;
-      transition: 0.3s;*/
-      
-    }
-    .img4:hover{
-      opacity: 1;
-      transform: scale(1.0);
-    }
-    .img5{
-      width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 42vh;
-      border-radius:25px;
-      /*opacity: 0.5;*/
-      
-    }
-    .img5:hover{
-      opacity: 1;
-      transform: scale(1.0);
-    }
-   
-    .img6{
-      width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 55vh;
-      border-radius:25px;
-      /*opacity: 0.5;*/
-      
-    }
-    .img6:hover{
-      opacity: 1;
-      transform: scale(1.0);
-    }
-    .img7{
-      width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 68vh;
-      border-radius:25px;
 
+    .logo{
+        font-size:22px;
     }
-    .img7:hover{
-      opacity: 1;
-      transform: scale(1.0);
-    }
-    .img8{
-       width: 35%;
-      height: 70%;
-      position :absolute;
-      left: 81vh;
-      border-radius:25px;
 
+    .hero h1{
+        font-size:42px;
     }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .contact-box{
+        margin-top:50px;
+    }
+}
 
     /* CONTACT */
 
@@ -527,6 +476,8 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+
       
 
     </div>
@@ -654,30 +605,17 @@
       <div class="line"></div>
     </div>
 
-    <div class="gallery1">
-      <div class="img1">
-      <img src="img1.jpeg" class="img1">
-      </div>
-     
-      <div class="img3">
-      <img src="img3.jpeg" class="img3">
-      </div>
-      <div class="img4">
-      <img src="img4.jpeg" class="img4">
-      </div>
-      <div class="img5">
-      <img src="img5.jpeg" class="img5">
-      </div>
-      <div class="img6">
-      <img src="img6.jpeg" class="img6">
-      </div>
-      <div class="img7">
-      <img src="img7.jpeg" class="img7">
-      </div>
-      <div class="img8">
-      <img src="img8.jpeg" class="img8">
-      </div>
-    </div>
+  <div class="gallery1">
+
+  <img src="img1.jpeg" alt="Mehndi Design 1">
+  <img src="img3.jpeg" alt="Mehndi Design 2">
+  <img src="img4.jpeg" alt="Mehndi Design 3">
+  <img src="img5.jpeg" alt="Mehndi Design 4">
+  <img src="img6.jpeg" alt="Mehndi Design 5">
+  <img src="img7.jpeg" alt="Mehndi Design 6">
+  <img src="img8.jpeg" alt="Mehndi Design 7">
+
+  </div>
 
   </section>
 
