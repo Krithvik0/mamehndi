@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MA Mehndi Design</title>
+  <title>MA Mehndi Design - About</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#faf7ef;
+      color:#222;
+    }
+
+    h1,h2,h3{
+      font-family:'Cormorant Garamond',serif;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:1000;
+      background:#faf7ef;
+      padding:18px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:700;
+      color:#1e1e1e;
+    }
+
+    .menu{
+      font-size:28px;
+      cursor:pointer;
+    }
+
+    /* MOBILE MENU */
+
+    .mobile-menu{
+      position:fixed;
+      top:85px;
+      left:20px;
+      right:20px;
+      background:rgba(166,121,39,0.88);
+      backdrop-filter:blur(5px);
+      padding:35px 25px;
+      border-radius:18px;
+      z-index:999;
+      display:none;
+      flex-direction:column;
+    }
+
+    .mobile-menu a{
+      color:white;
+      font-size:22px;
+      font-weight:600;
+      padding:15px 0;
+      border-bottom:2px solid rgba(255,255,255,0.5);
+    }
+
+    .mobile-menu a:last-child{
+      border-bottom:none;
+    }
+
+    .close-btn{
+      color:white;
+      font-size:30px;
+      text-align:right;
+      margin-bottom:10px;
+      cursor:pointer;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:100vh;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .hero-img{
+      position:absolute;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.35);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      color:white;
+      max-width:500px;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:64px;
+      line-height:1;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:18px;
+      letter-spacing:2px;
+      margin-bottom:35px;
+    }
+
+    .btn-group{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      align-items:center;
+    }
+
+    .btn{
+      width:260px;
+      padding:16px;
+      border-radius:50px;
+      font-size:18px;
+      font-weight:600;
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .btn-primary{
+      background:white;
+      color:#111;
+    }
+
+    .btn-outline{
+      border:2px solid white;
+      color:white;
+      background:transparent;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* ABOUT */
+
+    .section{
+      padding:80px 25px;
+    }
+
+    .tag{
+      color:#a88b2f;
+      letter-spacing:2px;
+      font-size:14px;
+      margin-bottom:12px;
+      text-align:center;
+    }
+
+    .section-title{
+      font-size:52px;
+      line-height:1;
+      margin-bottom:25px;
+      color:#1f1631;
+      text-align:center;
+    }
+
+    .section-text{
+      font-size:18px;
+      line-height:1.9;
+      color:#666;
+      text-align:center;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin:40px 0;
+    }
+
+    .stat-box{
+      background:#fff;
+      padding:20px 10px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 5px 20px rgba(0,0,0,0.04);
+    }
+
+    .stat-box h3{
+      font-size:34px;
+      color:#a88b2f;
+    }
+
+    .stat-box p{
+      color:#666;
+    }
+
+    .gold-btn{
+      display:block;
+      text-align:center;
+      background:#caa61b;
+      color:white;
+      padding:18px;
+      border-radius:50px;
+      font-weight:600;
+      margin-top:10px;
+    }
+
+    /* SERVICES */
+
+    .center-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .center-title h2{
+      font-size:54px;
+    }
+
+    .line{
+      width:100px;
+      height:3px;
+      background:#caa61b;
+      margin:12px auto;
+    }
+
+    .services{
+      display:grid;
+      gap:25px;
+    }
+
+    .service-card{
+      background:white;
+      padding:35px 28px;
+      border-radius:30px;
+      box-shadow:0 5px 25px rgba(0,0,0,0.05);
+    }
+
+    .service-card h3{
+      font-size:38px;
+      margin-bottom:12px;
+      color:#2d1f2f;
+    }
+
+    .service-card p{
+      color:#666;
+      line-height:1.8;
+      font-size:17px;
+    }
+
+    /* PORTFOLIO */
+
+    .gallery1{
+      display:grid;
+      gap:28px;
+      margin-top:35px;
+    }
+  
+    .img1{
+      width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 3vh;
+      border-radius:25px;
+      /*opacity: 0.7;
+      transition: 0.3s ease;
+      */
+    }
+    .img1:hover{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+  
+    .img3{
+      width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 16vh;
+      border-radius:25px;  
+      /*opacity: 0.7;
+      transition: 0.3s ease;*/
+    }
+    .img3:hover{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    .img4{
+      width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 29vh;
+      border-radius:25px;
+      /*opacity: 0.7;
+      transition: 0.3s;*/
+      
+    }
+    .img4:hover{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    .img5{
+      width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 42vh;
+      border-radius:25px;
+      /*opacity: 0.5;*/
+      
+    }
+    .img5:hover{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+   
+    .img6{
+      width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 55vh;
+      border-radius:25px;
+      /*opacity: 0.5;*/
+      
+    }
+    .img6:hover{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    .img7{
+      width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 68vh;
+      border-radius:25px;
+
+    }
+    .img7:hover{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    .img8{
+       width: 35%;
+      height: 70%;
+      position :absolute;
+      left: 81vh;
+      border-radius:25px;
+
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:#141414;
+      color:white;
+      border-radius:40px 40px 0 0;
+      padding:50px 30px;
+      margin-top: 250px;
+
+    }
+
+    .contact-box h2{
+      color:#d8b243;
+      font-size:58px;
+      margin-top:20px;
+    }
+
+    .contact-info{
+      margin-bottom:15px;
+      font-size:20px;
+      color:#d8b243;
+      font-weight:500;
+    }
+
+    form{
+      background:#fff;
+      padding:30px;
+      border-radius:0 0 35px 35px;
+    }
+
+    form input,
+    form textarea,
+    form select{
+      width:100%;
+      padding:18px;
+      margin-top:10px;
+      margin-bottom:25px;
+      border:none;
+      background:#f7f4ea;
+      border-radius:10px;
+      font-size:17px;
+      outline:none;
+    }
+
+    form button{
+      width:100%;
+      padding:18px;
+      border:none;
+      border-radius:50px;
+      background:#111;
+      color:white;
+      font-size:18px;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#141414;
+      color:white;
+      padding:50px 30px 120px;
+    }
+
+    footer h2{
+      color:#d8b243;
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .footer-links a{
+      display:block;
+      color:white;
+      margin-bottom:14px;
+      font-size:18px;
+    }
+
+    .copyright{
+      margin-top:40px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:20px;
+      text-align:center;
+      font-size:15px;
+      color:#aaa;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp{
+      position:fixed;
+      bottom:25px;
+      left:20px;
+      width:70px;
+      height:70px;
+      background:#25d366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:34px;
+      color:white;
+      z-index:999;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    @media(max-width:600px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .section-title{
+        font-size:42px;
+      }
+
+      .service-card h3{
+        font-size:30px;
+      }
+
+      .center-title h2{
+        font-size:44px;
+      }
+
+      .contact-box h2{
+        font-size:44px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">MA Mehndi Design</div>
+
+    <div class="menu" id="menuBtn">☰</div>
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+      <div class="close-btn" id="closeBtn">✕</div>
+
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <img 
+      src="henna.jpg"
+      alt="MA Mehndi Design"
+      class="hero-img"
+    >
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>MA Mehndi Design</h1>
+
+      <p>
+        PREMIUM BRIDAL & ARABIC MEHNDI DESIGNS IN COIMBATORE
+      </p>
+
+      <div class="btn-group">
+
+        <a href="#contact" class="btn btn-primary">
+          Book Now
+        </a>
+
+        <a href="#portfolio" class="btn btn-outline">
+          View Gallery
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+    <p class="tag">THE ARTISTRY</p>
+     <div style="text-align:center;">
+    <img 
+      src="Container.png"
+      alt="MA Mehndi Artist"
+    >
+    </div>
+
+    
+
+    <h2 class="section-title">
+      Preserving Tradition with Modern Elegance
+    </h2>
+
+    <p class="section-text">
+      At MA Mehndi Design, we create beautiful bridal and traditional mehndi designs using organic henna for rich and long-lasting stains.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat-box">
+        <h3>500+</h3>
+        <p>Happy Clients</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>5+</h3>
+        <p>Years Exp</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>100%</h3>
+        <p>Organic</p>
+      </div>
+
+    </div>
+
+    <a href="#contact" class="gold-btn">
+      Book Now
+    </a>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="section" id="services">
+
+    <div class="center-title">
+      <h2>Our Services</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="services">
+
+      <div class="service-card">
+        <h3>Bridal Mehndi</h3>
+        <p>Traditional bridal mehndi with intricate detailing.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Arabic Design</h3>
+        <p>Elegant Arabic floral mehndi patterns.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Festival Mehndi</h3>
+        <p>Stylish mehndi designs for special occasions.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PORTFOLIO -->
+
+  <section class="section" id="portfolio">
+
+    <div class="center-title">
+      <h2>Our Portfolio</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="gallery1">
+      <div class="img1">
+      <img src="img1.jpeg" class="img1">
+      </div>
+     
+      <div class="img3">
+      <img src="img3.jpeg" class="img3">
+      </div>
+      <div class="img4">
+      <img src="img4.jpeg" class="img4">
+      </div>
+      <div class="img5">
+      <img src="img5.jpeg" class="img5">
+      </div>
+      <div class="img6">
+      <img src="img6.jpeg" class="img6">
+      </div>
+      <div class="img7">
+      <img src="img7.jpeg" class="img7">
+      </div>
+      <div class="img8">
+      <img src="img8.jpeg" class="img8">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <div class="contact-box">
+
+      <h2>Reserve Your Date</h2>
+
+      <div class="contact-info">
+        WhatsApp Quick Booking
+      </div>
+
+      <div class="contact-info">
+        +91 8870237838
+      </div>
+
+    </div>
+
+    <form id="bookingForm">
+
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <input type="number" id="phone" placeholder="Mobile Number" required>
+      <input type="date"   id="date" required>
+
+      <select id="eventType">
+        <option>Bridal</option>
+        <option>Arabic</option>
+        <option>Festival</option>
+      </select>
+
+      <textarea rows="5"
+      id="message"
+      placeholder="Tell us about your preferences..."></textarea>
+
+      <button type="submit">
+        SEND INQUIRY
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>MA Mehndi Design</h2>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      
+    </div>
+    <div class="footer-contact">
+      <a hreh="#contact">contact</a>
+      <h2>contact</h2>
+
+      <p>
+  📞 
+  <a 
+    href="tel:+8870237838"
+    style="color:#d8b243;"
+  >
+    8870237838
+  </a>
+</p>
+      <p>
+  📍 
+  <a 
+    href="https://www.google.com/maps/search/mega+city,+sundarapuram+to+madukkari+market+main+road+near+Meenakshi+martriculation+school+CBE105,+coimbatore/@10.9191789,76.9685291,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    style="color:#d8b243;"
+  >
+    Coimbatore, Tamil Nadu
+  </a>
+</p>
+
+     <p>
+  📷 
+  <a 
+    href="https://www.instagram.com/ma_mehndi_design?igsh=OWd1cDNnNjZrM3F0"
+    target="_blank"
+    style="color:#d8b243;"
+  >
+    @ma_mehndi_design
+  </a>
+</p>
+    </div>
+
+    <div class="copyright">
+      © 2024 MA Mehndi Design
+    </div>
+
+  </footer>
+
+  <!-- WHATSAPP -->
+
+  <a class="whatsapp"
+  href="https://wa.me/918870237838"
+  target="_blank">
+    💬
+  </a>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    // MOBILE MENU
+
+    const menuBtn =
+    document.getElementById("menuBtn");
+
+    const mobileMenu =
+    document.getElementById("mobileMenu");
+
+    const closeBtn =
+    document.getElementById("closeBtn");
+
+    // OPEN MENU
+
+    menuBtn.addEventListener("click", () => {
+
+      mobileMenu.style.display = "flex";
+
+    });
+
+    // CLOSE MENU
+
+    closeBtn.addEventListener("click", () => {
+
+      mobileMenu.style.display = "none";
+
+    });
+
+    // CLOSE MENU WHEN CLICKING LINKS
+
+    const menuLinks =
+    document.querySelectorAll(".mobile-menu a");
+
+    menuLinks.forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        mobileMenu.style.display = "none";
+
+      });
+
+    });
+
+    // WHATSAPP FORM
+
+   document
+.getElementById("bookingForm")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  let name =
+  document.getElementById("name").value;
+
+  let phone =
+  document.getElementById("phone").value;
+
+  let date =
+  document.getElementById("date").value;
+
+  let eventType =
+  document.getElementById("eventType").value;
+
+  let message =
+  document.getElementById("message").value;
+
+  let whatsappMessage =
+`🌿 MA Mehndi Design Booking Inquiry 🌿
+
+Name: ${name}
+
+Phone: ${phone}
+
+Booking Date: ${date}
+
+Mehndi Type: ${eventType}
+
+Customer Message:
+${message}`;
+
+  let whatsappURL =
+  `https://wa.me/918870237838?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappURL, "_blank");
+
+});
+  </script>
+
+</body>
+</html>
