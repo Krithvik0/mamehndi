@@ -49,17 +49,21 @@
       box-shadow:0 2px 10px rgba(0,0,0,0.05);
     }
 
-    .logoimg{
-      font-size:22px ;
-      font-weight:500;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:32px;
+    font-weight:700;
+    color:#1e1e1e;
+}
 
-    }
-
-    .logo{
-      font-size:32px;
-      font-weight:700;
-      color:#1e1e1e;
-    }
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
 
     .menu{
       font-size:28px;
@@ -317,9 +321,14 @@
         grid-template-columns:1fr;
     }
 
-    .logo{
-        font-size:22px;
-    }
+   .logo{
+    font-size:18px;
+}
+
+.logo img{
+    width:40px;
+    height:40px;
+}
 
     .hero h1{
         font-size:42px;
@@ -472,11 +481,10 @@
 
   <nav class="navbar">
 
-    <div class="logoimg">
-      <img src="mehndi/logo.png" class="logoimg">
-    </div>
-
-    <div class="logo">MA Mehndi Design</div>
+<div class="logo">
+    <img src="logo.png" alt="MA Logo">
+    <span>MA Mehndi Design</span>
+</div>
 
     <div class="menu" id="menuBtn">☰</div>
 
